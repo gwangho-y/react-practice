@@ -1,7 +1,5 @@
 import React, { useReducer, useState } from 'react';
 
-// 리듀서는 밖으로 빠진다
-
 
 function reducer(state, action) {
   switch (action.type) {
@@ -15,18 +13,15 @@ function reducer(state, action) {
 }
 
 function Counter() {
-  // [상태값, dispatch] = 
-  // * dispatch == 액션을 발생시키는 함수를 전달
-  const [number, dispatch] = useReducer(reducer, 0)
+  const [number, dispatch] = useReducer(reducer, 0);
 
   const onIncrease = () => {
-    dispatch({type: 'INCREMENT'})
-  }
+    dispatch({ type: 'INCREMENT' });
+  };
 
   const onDecrease = () => {
-    dispatch({type: 'DECREMENT'})
-  }
-  
+    dispatch({ type: 'DECREMENT' });
+  };
 
   return (
     <div>
